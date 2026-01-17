@@ -1,25 +1,23 @@
-/* Reset browser default margins */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --blue-color: #00acdc;
 }
 
 body {
+  margin: 0;
   font-family: Roboto, sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-/* Header styles */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 0 50px;
-  height: 60px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  height: 60px;
 }
 
 .logo {
@@ -27,22 +25,22 @@ body {
   align-items: center;
 }
 
-/* Navigation styles */
-.menu {
+.nav__list {
   display: flex;
   list-style: none;
-  height: 60px;
+  margin: 0;
+  padding: 0;
 }
 
-.menu li {
+.nav__item {
   margin-left: 20px;
 }
 
-.menu li:first-child {
+.nav__item:first-child {
   margin-left: 0;
 }
 
-.menu a {
+.nav__link {
   display: flex;
   align-items: center;
   height: 60px;
@@ -51,25 +49,23 @@ body {
   font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
-  padding: 0;
   position: relative;
 }
 
-.menu a:hover {
-  color: #00acdc;
+.nav__link:hover {
+  color: var(--blue-color);
 }
 
-/* Active link styles */
-.menu a.is-active {
-  color: #00acdc;
+.nav__link.is-active {
+  color: var(--blue-color);
 }
 
-.menu a.is-active::after {
+.nav__link.is-active::after {
   content: '';
   position: absolute;
   width: 37px;
   height: 4px;
-  background: #00acdc;
+  background-color: var(--blue-color);
   border-radius: 8px;
   bottom: 0;
   left: 50%;
